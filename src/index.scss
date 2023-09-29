@@ -3,7 +3,6 @@ $secondary: rgb(170, 199, 52);
 $base-color: #333;
 $base-hover-color: rgba(0, 0, 0, 0.5);
 
-
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Satisfy&display=swap');
 body {
@@ -20,13 +19,14 @@ body {
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 html {
 	scroll-behavior: smooth;
 }
-.active{
+.active {
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.263);
 }
 .navbar {
@@ -53,8 +53,8 @@ html {
 
 				width: 0;
 				height: 2px;
-				background-color:$base-color;
-				opacity:0.8;
+				background-color: $base-color;
+				opacity: 0.8;
 				transform: translateX(-50%);
 				transition: width 0.3s ease-in-out;
 			}
@@ -73,7 +73,6 @@ html {
 		}
 	}
 }
-
 
 .hero-image {
 	height: 20rem;
@@ -118,15 +117,19 @@ html {
 	color: $base-color;
 }
 .form-container {
-    max-width: 900px;
-    margin: 0 auto;
-    width: 80%;
-  }
-  
+	min-width: 32rem;
+	margin: 0 auto;
+	width: 80%;
+}
 
-  .form-container .form-control {
-    width: 100%;
-  }
+.form {
+	width: 100%;
+	padding: 2rem;
+}
+
+.form-container .form-control {
+	width: 100%;
+}
 
 .footer {
 	font-weight: 300;

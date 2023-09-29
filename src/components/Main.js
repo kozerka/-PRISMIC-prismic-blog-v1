@@ -2,20 +2,18 @@ import Post from './Post';
 import CustomPagination from './CustomPagination';
 import { Container, Row, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
+import { computePagination } from '../helpers/paginationRules';
 
 const Main = ({ posts, path = '', page }) => {
-	const itemsPerPage = 6;
-	const currentPage = parseInt(page, 10) || 1;
-	const startIndex = (currentPage - 1) * itemsPerPage;
-	const endIndex = startIndex + itemsPerPage;
-
-	const paginatedPosts = posts.slice(startIndex, endIndex);
-	const totalPages = Math.ceil(posts.length / itemsPerPage);
-
+	const {
+		paginatedItems: paginatedPosts,
+		totalPages,
+		currentPage,
+	} = computePagination(posts, page);
 	return (
 		<Container fluid>
 			<Row>
-				{paginatedPosts.map(singlePost => (
+				{paginatedPosts.map((singlePost) => (
 					<Col xs={12} md={6} key={singlePost.uid}>
 						<Post uid={singlePost.uid} />
 					</Col>

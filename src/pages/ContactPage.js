@@ -32,11 +32,12 @@ const ContactPage = () => {
 		<div className={'form-container'}>
 			{showAlert && (
 				<Alert className={'text-center'} variant={'success'}>
-					Thank you for filling out the contact form. I&apos;ll get back to you soon.
+					Thank you for filling out the contact form. I&apos;ll get back to you
+					soon.
 				</Alert>
 			)}
 			<Form
-				style={{ maxWidth: '600px', margin: '0 auto', padding: '20px' }}
+				className={'form'}
 				noValidate
 				validated={validated}
 				onSubmit={handleSubmit}
